@@ -1,0 +1,22 @@
+<h2>Live registration</h2>
+<form [formGroup]="userprofileForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="First name" formControlName="firstName" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Last name" formControlName="lastName" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="age" formControlName="age" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="email" formControlName="email" required>
+  </mat-form-field>
+  <br>
+  <button mat-flat-button color="primary" type="submit" [disabled]="!userprofileForm.valid">Save</button>
+</form>
+
+<router-outlet></router-outlet>
